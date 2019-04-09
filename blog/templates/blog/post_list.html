@@ -9,18 +9,13 @@
 			<h1><a href="/">Django Girls Blog</a></h1>
 		</div>
 
-		<div>
-			<p>Published day and time</p>
-			<h2><a href="">My first post</a></h2>
-			<p>fkdlæajsk fjkdlæsaf jfdklæsafjkl jfkldæsafj jfdklæsafl fjdklsæafjk fkdlæajf æalksjdf.</p>
-		</div>
-
-		<div>
-			<h2><a href="">My second post</a></h2>
-			<p>Published another day and time</p>
-			<p>fkdlæajsk fjkdlæsaf jfdklæsafjkl jfkldæsafj jfdklæsafl fjdklsæafjk fkdlæajf æalksjdf.</p>
-		</div>
-
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
 
 
 	</body>
