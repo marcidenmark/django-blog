@@ -1,19 +1,5 @@
-<!-- blog/templates/blog/post_list.html -->
-{% extends 'blog/base.html' %}
-	{% block content %}
-		{% for post in posts %}
-			<article class="margin">
-				<h2 ><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-				<p >{{ post.text|linebreaksbr }}</p>
-				<p >published: {{ post.published_date }}</p>
-			</article>
-		{% endfor %}
-	{% endblock %}
+<!DOCTYPE html> {% load static %}
 
-
-<!-- {% load static %}
-
-<!DOCTYPE html>
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -29,6 +15,19 @@
 			<h1><a href="/">Django Girls Blog</a></h1>
 		</div>
 
+		<article>
+		{% block content %}
+		{% endblock %}
+		</article>
+
+	</body>
+</html>
+
+<!-- 	<body>
+		<div class="margin">
+			<h1><a href="/">Django Girls Blog</a></h1>
+		</div>
+
 		{% for post in posts %}
 			<article>
 				<h2 class="margin"><a href="">{{ post.title }}</a></h2>
@@ -38,5 +37,4 @@
 			</article>
 		{% endfor %}
 
-	</body>
-</html> -->
+	</body> -->

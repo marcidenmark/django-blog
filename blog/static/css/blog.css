@@ -1,0 +1,21 @@
+h1 {
+	color:pink !important;
+	font-family: 'Lobster', cursive;
+}
+a {
+	color: orange !important;
+}
+
+h2 {
+	font-family: Courier New;
+	padding-top: 40px;
+}
+
+.margin > * {
+	margin:10px 50px;
+
+}
+
+
+/*> *  child of   direct decendent
+*/
