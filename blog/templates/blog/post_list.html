@@ -8,7 +8,10 @@
 				<p >published: {{ post.published_date }}</p>
 			</article>
 		{% endfor %}
+		{% if user.is_authenticated %}
 			<a href="{% url 'post_new' %}">Click here to add a post</a>
+		{% endif %}
+
 
 	{% endblock %}
 
